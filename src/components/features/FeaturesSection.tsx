@@ -10,8 +10,6 @@ const FeaturesSection = () => {
       id="features"
       className="relative bg-gradient-to-b from-gray-900 to-gray-800 py-32 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[url('/assets/turkey-map.png')] opacity-15 mix-blend-soft-light animate-pulse-slow" />
-
       <div className="container mx-auto px-6 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

@@ -9,7 +9,7 @@ const AboutPage = () => {
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto"
         >
@@ -17,7 +17,7 @@ const AboutPage = () => {
             <div className="space-y-8">
               <motion.h1
                 initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
                 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400"
               >
                 Revolutionizing Earthquake Response
@@ -59,10 +59,10 @@ const AboutPage = () => {
 
             <motion.div
               initial={{ x: 100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
+              animate={{ opacity: 1 }}
               className="relative h-96 bg-gradient-to-tr from-blue-900 to-purple-900 rounded-3xl overflow-hidden"
             >
-              <div className="absolute inset-0 bg-[url('/assets/map-pattern.svg')] opacity-20" />
+              <div className="absolute inset-0 bg-[url('/assets/turkey-map.webp')] opacity-20" />
               <div className="relative z-10 p-8 h-full flex items-center justify-center">
                 {/* <img 
                   src="/assets/team-illustration.png" 
