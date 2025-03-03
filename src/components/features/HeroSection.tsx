@@ -14,7 +14,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.15 }}
         transition={{ duration: 2 }}
-        className="absolute inset-0 bg-[url('/assets/turkey-map.webp')] bg-contain bg-no-repeat bg-center mix-blend-soft-light"
+        className="absolute inset-0 bg-[url('/quake-path/assets/turkey-map.webp')] bg-contain bg-no-repeat bg-center mix-blend-soft-light"
       />
 
       <div className="container mx-auto px-6 text-center relative z-10">
