@@ -62,7 +62,7 @@ const AboutPage = () => {
               animate={{ opacity: 1 }}
               className="relative h-96 bg-gradient-to-tr from-blue-900 to-purple-900 rounded-3xl overflow-hidden"
             >
-              <div className="absolute inset-0 bg-[url('/assets/turkey-map.webp')] opacity-20" />
+              <div className="absolute inset-0 bg-[url('../../../assets/turkey-map.webp')] opacity-20" />
               <div className="relative z-10 p-8 h-full flex items-center justify-center">
                 {/* <img 
                   src="/assets/team-illustration.png" 
