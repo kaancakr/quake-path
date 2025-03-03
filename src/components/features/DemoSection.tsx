@@ -9,10 +9,10 @@ const DemoSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.3 }}
         transition={{ duration: 2 }}
-        className="absolute inset-0 bg-[url('/assets/turkey-map.webp')] bg-contain bg-no-repeat bg-center mix-blend-hard-light"
+        className="absolute inset-0 bg-[url('../../../assets/turkey-map.webp')] bg-contain bg-no-repeat bg-center mix-blend-hard-light"
       />
 
-      <div className="absolute inset-0 bg-[url('/assets/grid-pattern.png')] opacity-10 mix-blend-overlay animate-pulse-slow" />
+      <div className="absolute inset-0 bg-[url('../../../assets/grid-pattern.png')] opacity-10 mix-blend-overlay animate-pulse-slow" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
