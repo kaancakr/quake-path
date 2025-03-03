@@ -43,7 +43,7 @@ const DemoSection = () => {
               </motion.div>
 
               <motion.div
-                className="absolute left-[5%] top-[15%] w-8 h-8 bg-yellow-400 rounded-full shadow-xl cursor-pointer border-2 border-white"
+                className="absolute left-[8%] top-[22%] w-8 h-8 bg-yellow-400 rounded-full shadow-xl cursor-pointer border-2 border-white"
                 initial={{ scale: 0 }}
                 animate={{
                   scale: [0, 1, 0.8, 1],
