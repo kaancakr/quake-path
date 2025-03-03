@@ -75,7 +75,7 @@ const DownloadPage = () => {
             whileInView={{ x: 0, opacity: 1 }}
             className="relative h-96 bg-gradient-to-tr from-blue-900 to-purple-900 rounded-[3rem] overflow-hidden shadow-2xl"
           >
-            <div className="absolute inset-0 bg-[url('../../../assets/map-pattern.svg')] opacity-20" />
+            <div className="absolute inset-0 bg-[url('/map-pattern.svg')] opacity-20" />
             {/* <img 
               src="/assets/phone-mockup.png"
               alt="App Preview"
