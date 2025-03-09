@@ -53,7 +53,7 @@ const AboutPage = () => {
               transition={{ duration: 0.5 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-purple-300 mb-6">
-                The Minds Behind QuakeRescue
+                The Minds Behind QuakePath
               </h1>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
                 We&apos;re a dedicated team of innovators committed to
