@@ -42,9 +42,9 @@ const ContactPage = () => {
                     Headquarters
                   </h3>
                   <p className="text-gray-400">
-                    123 Emergency Lane
+                    Ön Cebeci, Ziya Gökalp Cd. 48/A, 06420 Çankaya/Ankara
                     <br />
-                    Istanbul, Turkey
+                    Ankara, Turkey
                   </p>
                 </div>
               </div>
@@ -58,7 +58,7 @@ const ContactPage = () => {
                   <p className="text-gray-400">
                     +90 555 123 4567
                     <br />
-                    emergency@quake-rescue.com
+                    eren.cakir@tedu.edu.tr
                   </p>
                 </div>
               </div>
