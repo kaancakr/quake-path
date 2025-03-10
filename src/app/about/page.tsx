@@ -15,24 +15,27 @@ const AboutPage = () => {
       icon: CpuChipIcon,
       color: "from-blue-400 to-cyan-400",
       delay: 0.1,
-      profileURL:
-        "https://www.linkedin.com/in/eren-kaan-%C3%A7ak%C4%B1r-0b4312229/",
+      profileURL: "https://www.linkedin.com/in/eren-kaan-%C3%A7ak%C4%B1r-0b4312229/",
+      image: "/images/kaan.png"
+
     },
     {
       name: "Berke Beyazbenli",
       role: "System Architect",
       icon: GlobeAltIcon,
-      color: "from-purple-400 to-pink-400",
+      color: "from-green-400 to-teal-400",
       delay: 0.2,
       profileURL: "https://www.linkedin.com/in/berke-beyazbenli-266bab241/",
+      image: "/images/berke.png" 
     },
     {
       name: "Selin Siviş",
       role: "Operations Lead",
       icon: UserCircleIcon,
-      color: "from-green-400 to-teal-400",
+      color: "from-purple-400 to-pink-400",
       delay: 0.3,
       profileURL: "https://www.linkedin.com/in/selin-sivi%C5%9F-656550304/",
+      image: "/images/selin.png"
     },
   ];
 
@@ -77,10 +80,13 @@ const AboutPage = () => {
                   className={`absolute inset-0 rounded-3xl bg-gradient-to-br opacity-0 group-hover:opacity-20 transition-opacity duration-300 ${member.color}`}
                 />
                 <div className="relative z-10 flex flex-col items-center text-center">
-                  <div
-                    className={`p-5 rounded-2xl bg-gradient-to-br ${member.color} mb-6`}
-                  >
-                    <member.icon className="w-10 h-10 text-white" />
+                  {/* for images */}
+                  <div className={`p-5 rounded-2xl bg-gradient-to-br ${member.color} mb-6`}>
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      className="w-24 h-24 rounded-full object-cover border-4 border-white" 
+                    />
                   </div>
                   <h3 className="text-2xl font-semibold text-white mb-2">
                     {member.name}
@@ -95,13 +101,7 @@ const AboutPage = () => {
                     >
                       View Profile
                     </motion.a>
-                    <motion.a
-                      href="#"
-                      whileHover={{ scale: 1.05 }}
-                      className="px-4 py-2 text-sm border border-gray-600 rounded-lg text-gray-300 hover:border-white hover:text-white transition-all"
-                    >
-                      Contact
-                    </motion.a>
+        
                   </div>
                 </div>
               </motion.div>
