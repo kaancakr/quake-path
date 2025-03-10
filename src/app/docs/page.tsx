@@ -66,9 +66,8 @@ const DocumentsPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`bg-gradient-to-br from-blue-800/30 to-purple-800/30 p-1 rounded-2xl shadow-xl transition-shadow ${
-                !doc.available ? 'opacity-75' : 'hover:shadow-2xl'
-              }`}
+              className={`bg-gradient-to-br from-blue-800/30 to-purple-800/30 p-1 rounded-2xl shadow-xl transition-shadow ${!doc.available ? 'opacity-75' : 'hover:shadow-2xl'
+                }`}
             >
               <div className="h-full bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 relative">
                 {!doc.available && (
@@ -79,20 +78,17 @@ const DocumentsPage = () => {
                   </div>
                 )}
                 <div className="flex items-start gap-6">
-                  <div className={`p-4 rounded-xl ${
-                    doc.available ? 'bg-blue-900/30' : 'bg-gray-800/50'
-                  }`}>
+                  <div className={`p-4 rounded-xl ${doc.available ? 'bg-blue-900/30' : 'bg-gray-800/50'
+                    }`}>
                     {doc.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className={`text-2xl font-bold mb-3 ${
-                      doc.available ? 'text-gray-100' : 'text-gray-400'
-                    }`}>
+                    <h3 className={`text-2xl font-bold mb-3 ${doc.available ? 'text-gray-100' : 'text-gray-400'
+                      }`}>
                       {doc.title}
                     </h3>
-                    <p className={`mb-6 ${
-                      doc.available ? 'text-gray-400' : 'text-gray-500'
-                    }`}>
+                    <p className={`mb-6 ${doc.available ? 'text-gray-400' : 'text-gray-500'
+                      }`}>
                       {doc.description}
                     </p>
                     {doc.available ? (
