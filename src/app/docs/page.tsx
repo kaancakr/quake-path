@@ -13,7 +13,7 @@ const DocumentsPage = () => {
       title: "Project Proposal",
       description: "Initial project concept, objectives, methodology, and expected outcomes.",
       icon: <DocumentTextIcon className="w-8 h-8 text-blue-400" />,
-      link: "/docs/proposal.pdf",
+      link: "https://drive.google.com/file/d/1Q35BpCCDDAdB5dIUbQE09B842zGIrgE-/view?usp=sharing",
       available: true
     },
     {
@@ -100,6 +100,7 @@ const DocumentsPage = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         href={doc.link}
+                        target="_blank"
                         className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
                       >
                         <DocumentTextIcon className="w-5 h-5" />
