@@ -16,7 +16,7 @@ const AboutPage = () => {
       color: "from-blue-400 to-cyan-400",
       delay: 0.1,
       profileURL: "https://www.linkedin.com/in/eren-kaan-%C3%A7ak%C4%B1r-0b4312229/",
-      image: "/images/kaan.png"
+      image: "/quake-path/assets/kaan.png"
 
     },
     {
@@ -26,7 +26,7 @@ const AboutPage = () => {
       color: "from-green-400 to-teal-400",
       delay: 0.2,
       profileURL: "https://www.linkedin.com/in/berke-beyazbenli-266bab241/",
-      image: "/images/berke.png" 
+      image: "/quake-path/assets/berke.png" 
     },
     {
       name: "Selin Siviş",
@@ -35,7 +35,7 @@ const AboutPage = () => {
       color: "from-purple-400 to-pink-400",
       delay: 0.3,
       profileURL: "https://www.linkedin.com/in/selin-sivi%C5%9F-656550304/",
-      image: "/images/selin.png"
+      image: "/quake-path/assets/selin.png"
     },
   ];
 
