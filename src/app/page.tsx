@@ -16,7 +16,7 @@ const documents = [
     description:
       "Initial project concept, objectives, methodology, and expected outcomes.",
     icon: <DocumentTextIcon className="w-8 h-8 text-blue-400" />,
-    link: "/docs/proposal.pdf",
+    link: "https://drive.google.com/file/d/1Q35BpCCDDAdB5dIUbQE09B842zGIrgE-/view?usp=sharing",
     available: true,
   },
   {
