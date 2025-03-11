@@ -50,7 +50,7 @@ export default function Home() {
     <>
       <HeroSection />
       <FeaturesSection />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto p-6 md:p-0">
         {documents.map((doc, index) => (
           <motion.div
             key={doc.title}
@@ -97,6 +97,7 @@ export default function Home() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       href={doc.link}
+                      target="_blank"
                       className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
                     >
                       <DocumentTextIcon className="w-5 h-5" />
