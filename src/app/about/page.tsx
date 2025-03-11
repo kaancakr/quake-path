@@ -6,6 +6,7 @@ import {
   CpuChipIcon,
   GlobeAltIcon,
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 const AboutPage = () => {
   const teamMembers = [
@@ -82,10 +83,12 @@ const AboutPage = () => {
                 <div className="relative z-10 flex flex-col items-center text-center">
                   {/* for images */}
                   <div className={`p-5 rounded-2xl bg-gradient-to-br ${member.color} mb-6`}>
-                    <img 
+                    <Image 
                       src={member.image} 
                       alt={member.name} 
-                      className="w-24 h-24 rounded-full object-cover border-4 border-white" 
+                      className="w-24 h-24 rounded-full object-cover border-4 border-white"
+                      width={96}
+                      height={96} 
                     />
                   </div>
                   <h3 className="text-2xl font-semibold text-white mb-2">
