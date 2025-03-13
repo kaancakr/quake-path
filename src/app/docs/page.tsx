@@ -13,7 +13,7 @@ const DocumentsPage = () => {
       title: "Project Proposal",
       description: "Initial project concept, objectives, methodology, and expected outcomes.",
       icon: <DocumentTextIcon className="w-8 h-8 text-blue-400" />,
-      link: "https://drive.google.com/file/d/1Q35BpCCDDAdB5dIUbQE09B842zGIrgE-/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1a6zYaiHwjIFYx1MvGks6-4QeNu3kXnKc/view?usp=sharing",
       available: true
     },
     {
