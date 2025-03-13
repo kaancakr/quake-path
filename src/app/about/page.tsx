@@ -16,9 +16,9 @@ const AboutPage = () => {
       icon: CpuChipIcon,
       color: "from-blue-400 to-cyan-400",
       delay: 0.1,
-      profileURL: "https://www.linkedin.com/in/eren-kaan-%C3%A7ak%C4%B1r-0b4312229/",
-      image: "/quake-path/assets/kaan.png"
-
+      profileURL:
+        "https://www.linkedin.com/in/eren-kaan-%C3%A7ak%C4%B1r-0b4312229/",
+      image: "/quake-path/assets/kaan.png",
     },
     {
       name: "Berke Beyazbenli",
@@ -27,7 +27,7 @@ const AboutPage = () => {
       color: "from-green-400 to-teal-400",
       delay: 0.2,
       profileURL: "https://www.linkedin.com/in/berke-beyazbenli-266bab241/",
-      image: "/quake-path/assets/berke.png" 
+      image: "/quake-path/assets/berke.png",
     },
     {
       name: "Selin Siviş",
@@ -36,7 +36,7 @@ const AboutPage = () => {
       color: "from-purple-400 to-pink-400",
       delay: 0.3,
       profileURL: "https://www.linkedin.com/in/selin-sivi%C5%9F-656550304/",
-      image: "/quake-path/assets/selin.png"
+      image: "/quake-path/assets/selin.png",
     },
   ];
 
@@ -82,13 +82,15 @@ const AboutPage = () => {
                 />
                 <div className="relative z-10 flex flex-col items-center text-center">
                   {/* for images */}
-                  <div className={`p-5 rounded-2xl bg-gradient-to-br ${member.color} mb-6`}>
-                    <Image 
-                      src={member.image} 
-                      alt={member.name} 
+                  <div
+                    className={`p-5 rounded-2xl bg-gradient-to-br ${member.color} mb-6`}
+                  >
+                    <Image
+                      src={member.image}
+                      alt={member.name}
                       className="w-24 h-24 rounded-full object-cover border-4 border-white"
                       width={96}
-                      height={96} 
+                      height={96}
                     />
                   </div>
                   <h3 className="text-2xl font-semibold text-white mb-2">
@@ -104,7 +106,6 @@ const AboutPage = () => {
                     >
                       View Profile
                     </motion.a>
-        
                   </div>
                 </div>
               </motion.div>
