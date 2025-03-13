@@ -1,48 +1,12 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
-import {
-  DocumentTextIcon,
-  ChartBarIcon,
-  WrenchScrewdriverIcon,
-  BeakerIcon,
-} from "@heroicons/react/24/outline";
+import { DocumentTextIcon } from "@heroicons/react/24/outline";
+import { documents } from "@/constants/documents";
 
 const DocumentsPage = () => {
-  const documents = [
-    {
-      title: "Project Proposal",
-      description: "Initial project concept, objectives, methodology, and expected outcomes.",
-      icon: <DocumentTextIcon className="w-8 h-8 text-blue-400" />,
-      link: "https://drive.google.com/file/d/1a6zYaiHwjIFYx1MvGks6-4QeNu3kXnKc/view?usp=sharing",
-      available: true
-    },
-    {
-      title: "Technical Specifications",
-      description: "Detailed technical specifications, requirements, and implementation guidelines.",
-      icon: <WrenchScrewdriverIcon className="w-8 h-8 text-purple-400" />,
-      link: "/docs/specs.pdf",
-      available: false
-    },
-    {
-      title: "Analysis Report",
-      description: "Comprehensive analysis of problem domain, user needs, and technical constraints.",
-      icon: <ChartBarIcon className="w-8 h-8 text-indigo-400" />,
-      link: "/docs/analysis.pdf",
-      available: false
-    },
-    {
-      title: "High-Level Design",
-      description: "Architectural design, system components, interfaces, and implementation strategy.",
-      icon: <BeakerIcon className="w-8 h-8 text-pink-400" />,
-      link: "/docs/design.pdf",
-      available: false
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 py-20 px-6">
       <div className="max-w-7xl mx-auto">
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +18,8 @@ const DocumentsPage = () => {
             Project Documents
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Explore our comprehensive documentation covering all aspects of the project lifecycle.
+            Explore our comprehensive documentation covering all aspects of the
+            project lifecycle.
           </p>
         </motion.div>
 
@@ -66,8 +31,9 @@ const DocumentsPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`bg-gradient-to-br from-blue-800/30 to-purple-800/30 p-1 rounded-2xl shadow-xl transition-shadow ${!doc.available ? 'opacity-75' : 'hover:shadow-2xl'
-                }`}
+              className={`bg-gradient-to-br from-blue-800/30 to-purple-800/30 p-1 rounded-2xl shadow-xl transition-shadow ${
+                !doc.available ? "opacity-75" : "hover:shadow-2xl"
+              }`}
             >
               <div className="h-full bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 relative">
                 {!doc.available && (
@@ -78,17 +44,26 @@ const DocumentsPage = () => {
                   </div>
                 )}
                 <div className="flex items-start gap-6">
-                  <div className={`p-4 rounded-xl ${doc.available ? 'bg-blue-900/30' : 'bg-gray-800/50'
-                    }`}>
-                    {doc.icon}
+                  <div
+                    className={`p-4 rounded-xl ${
+                      doc.available ? "bg-blue-900/30" : "bg-gray-800/50"
+                    }`}
+                  >
+                    {doc.icon()}
                   </div>
                   <div className="flex-1">
-                    <h3 className={`text-2xl font-bold mb-3 ${doc.available ? 'text-gray-100' : 'text-gray-400'
-                      }`}>
+                    <h3
+                      className={`text-2xl font-bold mb-3 ${
+                        doc.available ? "text-gray-100" : "text-gray-400"
+                      }`}
+                    >
                       {doc.title}
                     </h3>
-                    <p className={`mb-6 ${doc.available ? 'text-gray-400' : 'text-gray-500'
-                      }`}>
+                    <p
+                      className={`mb-6 ${
+                        doc.available ? "text-gray-400" : "text-gray-500"
+                      }`}
+                    >
                       {doc.description}
                     </p>
                     {doc.available ? (

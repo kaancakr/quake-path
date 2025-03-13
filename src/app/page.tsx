@@ -2,48 +2,9 @@
 import HeroSection from "@/components/features/HeroSection";
 import FeaturesSection from "@/components/features/FeaturesSection";
 import DemoSection from "@/components/features/DemoSection";
-import {
-  DocumentTextIcon,
-  ChartBarIcon,
-  WrenchScrewdriverIcon,
-  BeakerIcon,
-} from "@heroicons/react/24/outline";
+import { DocumentTextIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
-
-const documents = [
-  {
-    title: "Project Proposal",
-    description:
-      "Initial project concept, objectives, methodology, and expected outcomes.",
-    icon: <DocumentTextIcon className="w-8 h-8 text-blue-400" />,
-    link: "https://drive.google.com/file/d/1Q35BpCCDDAdB5dIUbQE09B842zGIrgE-/view?usp=sharing",
-    available: true,
-  },
-  {
-    title: "Technical Specifications",
-    description:
-      "Detailed technical specifications, requirements, and implementation guidelines.",
-    icon: <WrenchScrewdriverIcon className="w-8 h-8 text-purple-400" />,
-    link: "/docs/specs.pdf",
-    available: false,
-  },
-  {
-    title: "Analysis Report",
-    description:
-      "Comprehensive analysis of problem domain, user needs, and technical constraints.",
-    icon: <ChartBarIcon className="w-8 h-8 text-indigo-400" />,
-    link: "/docs/analysis.pdf",
-    available: false,
-  },
-  {
-    title: "High-Level Design",
-    description:
-      "Architectural design, system components, interfaces, and implementation strategy.",
-    icon: <BeakerIcon className="w-8 h-8 text-pink-400" />,
-    link: "/docs/design.pdf",
-    available: false,
-  },
-];
+import { documents } from "../constants/documents";
 
 export default function Home() {
   return (
@@ -75,7 +36,7 @@ export default function Home() {
                     doc.available ? "bg-blue-900/30" : "bg-gray-800/50"
                   }`}
                 >
-                  {doc.icon}
+                  {doc.icon()}
                 </div>
                 <div className="flex-1">
                   <h3
