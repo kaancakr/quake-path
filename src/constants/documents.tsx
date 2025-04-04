@@ -23,12 +23,12 @@ export const documents = [
     available: false,
   },
   {
-    title: "Analysis Report",
+    title: "Project Analysis Report",
     description:
       "Comprehensive analysis of problem domain, user needs, and technical constraints.",
     icon: () => <ChartBarIcon className="w-8 h-8 text-indigo-400" />,
-    link: "/docs/analysis.pdf",
-    available: false,
+    link: "https://drive.google.com/file/d/1xeHliLszynRR9aqaJOxGKAksMEAy70zd/view?usp=sharing",
+    available: true,
   },
   {
     title: "High-Level Design",
