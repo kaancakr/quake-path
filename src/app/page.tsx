@@ -1,23 +1,46 @@
 "use client";
-import HeroSection from "@/components/features/HeroSection";
-import FeaturesSection from "@/components/features/FeaturesSection";
-import DemoSection from "@/components/features/DemoSection";
+import dynamic from 'next/dynamic';
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { documents } from "../constants/documents";
+import { useRef } from 'react';
+
+const HeroSection = dynamic(() => import("@/components/features/HeroSection"), {
+  loading: () => <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900" />,
+  ssr: true 
+});
+
+const FeaturesSection = dynamic(() => import("@/components/features/FeaturesSection"), {
+  loading: () => <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800" />,
+  ssr: false
+});
+
+const DemoSection = dynamic(() => import("@/components/features/DemoSection"), {
+  loading: () => <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800" />,
+  ssr: false
+});
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+};
 
 export default function Home() {
+  const documentsRef = useRef(null);
+  const isInView = useInView(documentsRef, { once: true, margin: "100px" });
+
   return (
     <>
       <HeroSection />
       <FeaturesSection />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto p-6 md:p-0">
+      <div ref={documentsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto p-6 md:p-0">
         {documents.map((doc, index) => (
           <motion.div
             key={doc.title}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={fadeInUp}
+            transition={{ duration: 0.2, delay: index * 0.05 }}
             className={`bg-gradient-to-br from-blue-800/30 to-purple-800/30 p-1 rounded-2xl shadow-xl transition-shadow ${
               !doc.available ? "opacity-75" : "hover:shadow-2xl"
             }`}
@@ -54,16 +77,14 @@ export default function Home() {
                     {doc.description}
                   </p>
                   {doc.available ? (
-                    <motion.a
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                    <a
                       href={doc.link}
                       target="_blank"
                       className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
                     >
                       <DocumentTextIcon className="w-5 h-5" />
                       <span>View Report</span>
-                    </motion.a>
+                    </a>
                   ) : (
                     <div className="inline-flex items-center gap-2 bg-gray-700/50 text-gray-500 px-6 py-3 rounded-lg font-medium cursor-not-allowed">
                       <DocumentTextIcon className="w-5 h-5" />

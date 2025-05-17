@@ -22,6 +22,7 @@ export const NAV_LINKS: NavLink[] = [
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
   { href: '/docs', label: 'Documents' },
+  { href: '/backlog', label: 'Backlog' },
 ];
 
 export const FEATURES: Feature[] = [
