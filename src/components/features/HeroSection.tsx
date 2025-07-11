@@ -9,9 +9,9 @@ import AnimatedText from "@/components/common/AnimatedText";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 overflow-hidden">
-      <div 
+      <div
         className="absolute inset-0 bg-[url('/quake-path/assets/turkey-map.webp')] bg-contain bg-no-repeat bg-center mix-blend-soft-light opacity-15"
-        style={{ willChange: 'transform' }}
+        style={{ willChange: "transform" }}
       />
 
       <div className="container mx-auto px-6 text-center relative z-10">
