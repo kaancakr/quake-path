@@ -35,7 +35,7 @@ export const documents = [
     description:
       "Architectural design, system components, interfaces, and implementation strategy.",
     icon: () => <BeakerIcon className="w-8 h-8 text-pink-400" />,
-    link: "/docs/design.pdf",
-    available: false,
+    link: "https://drive.google.com/file/d/1LNvzGGGkNaw3ddd55StJneHrgF8rkYIO/view?usp=drive_link",
+    available: true,
   },
 ];

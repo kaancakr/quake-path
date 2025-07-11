@@ -1,0 +1,24 @@
+
+name: ApyGuard Scanner Action
+
+on:
+  push:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      - name: Checkout repo
+        uses: actions/checkout@v3
+ 
+      - name: Run ApyGuard Security Scan
+        id: apyguard-scan
+        uses: apyguard-api-security/apyguard-action@latest
+        with:
+          api_key: ${ secrets.APYGUARD_API_KEY }
+          scan_task_id: 79b40e7a-2e91-48c2-858c-00245f79e59c
+          api_url: 'https://api.apyguard.com'
+          severity_threshold: 'Medium'
+
