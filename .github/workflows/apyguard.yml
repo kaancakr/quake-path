@@ -18,7 +18,7 @@ jobs:
         uses: apyguard-api-security/apyguard-action@latest
         with:
           api_key: ${ secrets.APYGUARD_API_KEY }
-          scan_task_id: 22d02639-1825-475f-a5de-693b1e45fd88
+          task_id: 22d02639-1825-475f-a5de-693b1e45fd88
           api_url: 'https://apyguard-api.a3f.xyz'
           severity_threshold: 'Medium'
 
