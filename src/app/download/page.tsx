@@ -25,16 +25,15 @@ const DownloadPage = () => {
 
             <div className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
-                <motion.a
+                <motion.div
                   whileHover={{ y: -5 }}
-                  className="group p-6 bg-gray-800/30 backdrop-blur-lg rounded-2xl border border-gray-700 hover:border-blue-500 transition-all shadow-xl hover:shadow-2xl"
-                  href="#"
+                  className="group p-6 bg-gray-800/30 backdrop-blur-lg rounded-2xl border border-gray-700 hover:border-blue-500 transition-all shadow-xl hover:shadow-2xl relative"
                 >
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-blue-900/30 rounded-xl">
                       <ArrowDownTrayIcon className="w-8 h-8 text-blue-400 group-hover:text-white transition-colors" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="text-xl font-bold text-white">
                         iOS Version
                       </h3>
@@ -43,25 +42,34 @@ const DownloadPage = () => {
                       </p>
                     </div>
                   </div>
-                </motion.a>
+                  <div className="mt-4 pt-4 border-t border-gray-700/50">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-900/30 text-blue-300">
+                      Coming Soon
+                    </span>
+                  </div>
+                </motion.div>
 
-                <motion.a
+                <motion.div
                   whileHover={{ y: -5 }}
-                  className="group p-6 bg-gray-800/30 backdrop-blur-lg rounded-2xl border border-gray-700 hover:border-purple-500 transition-all shadow-xl hover:shadow-2xl"
-                  href="#"
+                  className="group p-6 bg-gray-800/30 backdrop-blur-lg rounded-2xl border border-gray-700 hover:border-purple-500 transition-all shadow-xl hover:shadow-2xl relative"
                 >
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-purple-900/30 rounded-xl">
                       <ArrowDownTrayIcon className="w-8 h-8 text-purple-400 group-hover:text-white transition-colors" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="text-xl font-bold text-white">
                         Android Version
                       </h3>
                       <p className="text-gray-400">Available on Google Play</p>
                     </div>
                   </div>
-                </motion.a>
+                  <div className="mt-4 pt-4 border-t border-gray-700/50">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-900/30 text-purple-300">
+                      Coming Soon
+                    </span>
+                  </div>
+                </motion.div>
               </div>
 
               <div className="flex items-center gap-4 text-gray-400">
