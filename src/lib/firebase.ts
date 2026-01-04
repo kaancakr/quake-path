@@ -38,7 +38,7 @@ if (typeof window !== "undefined" || typeof require !== "undefined") {
     // Initialize Firestore
     db = firebaseFirestore.getFirestore(app);
     firebaseInitialized = true;
-  } catch (_err) {
+  } catch {
     // Firebase not installed or initialization error
     firebaseInitialized = false;
     if (process.env.NODE_ENV === "development") {
