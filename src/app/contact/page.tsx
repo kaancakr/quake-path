@@ -33,12 +33,13 @@ const ContactPage = () => {
       }
 
       // Dynamic import of Firestore functions
-      // @ts-expect-error - Firebase module types may not be available until package is installed
       const firestoreModule = await import("firebase/firestore");
       const { collection, addDoc, serverTimestamp } = firestoreModule;
       
       // Save contact form data to Firebase Firestore
-      await addDoc(collection(db, "contacts"), {
+      // Type assertion needed because db is typed as unknown when Firebase is not installed
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      await addDoc(collection(db as any, "contacts"), {
         name: data.name,
         email: data.email,
         message: data.message,
