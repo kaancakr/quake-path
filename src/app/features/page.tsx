@@ -78,7 +78,7 @@ const features: FeatureDetail[] = [
     technicalDetails: {
       architecture: "Damage Mapping Subsystem processes sensor data to create real-time severity heatmaps",
       endpoints: ["GET /api/v1/victims/{id}/location", "PUT /api/v1/safezones/{id}"],
-      reliability: "GeoJSON/raster layers for complex geographic mapping with PostgreSQL persistence",
+      reliability: "GeoJSON/raster layers for complex geographic mapping with Firebase real-time persistence",
     },
     useCases: [
       "Real-time disaster zone visualization",
@@ -351,7 +351,7 @@ export default function FeaturesPage() {
                 },
                 {
                   title: "Data Persistence Layer",
-                  description: "PostgreSQL for structured data and GeoJSON/raster layers for complex geographic mapping",
+                  description: "Firebase for real-time data synchronization and GeoJSON/raster layers for complex geographic mapping",
                 },
               ].map((layer, idx) => (
                 <motion.div

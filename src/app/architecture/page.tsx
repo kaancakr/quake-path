@@ -57,12 +57,13 @@ const architectureLayers = [
   {
     name: "Data Persistence Layer",
     icon: CircleStackIcon,
-    description: "PostgreSQL for structured data and GeoJSON/raster layers for complex geographic mapping",
+    description: "Firebase for real-time data synchronization and GeoJSON/raster layers for complex geographic mapping",
     components: [
-      "PostgreSQL database",
+      "Firebase Realtime Database",
+      "Firebase Firestore",
       "GeoJSON spatial data",
-      "Raster layer storage",
-      "Data replication and backup",
+      "Real-time data synchronization",
+      "Cloud storage for raster layers",
     ],
     color: "from-orange-500 to-red-500",
   },

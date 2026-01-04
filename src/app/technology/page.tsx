@@ -36,7 +36,8 @@ const techStack = [
     technologies: [
       { name: "Node.js", description: "JavaScript runtime for server-side development" },
       { name: "Express.js", description: "Web application framework for RESTful APIs" },
-      { name: "PostgreSQL", description: "Advanced relational database with spatial extensions" },
+      { name: "Firebase", description: "Real-time database and backend-as-a-service platform" },
+      { name: "Firebase Firestore", description: "NoSQL document database for scalable applications" },
       { name: "RESTful APIs", description: "Standard API architecture for service communication" },
     ],
     color: "from-purple-500 to-pink-500",
@@ -55,9 +56,9 @@ const techStack = [
     category: "Data & GIS",
     icon: CircleStackIcon,
     technologies: [
-      { name: "PostGIS", description: "Spatial database extension for geographic data" },
+      { name: "Firebase Realtime Database", description: "Real-time synchronized database for geographic data" },
       { name: "GeoJSON", description: "Format for encoding geographic data structures" },
-      { name: "Raster Layers", description: "Image-based geographic data storage" },
+      { name: "Firebase Storage", description: "Cloud storage for raster layers and images" },
       { name: "GPS Integration", description: "Real-time location tracking and mapping" },
     ],
     color: "from-orange-500 to-red-500",
