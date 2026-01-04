@@ -12,9 +12,11 @@ const DownloadPage = () => {
             whileInView={{ x: 0, opacity: 1 }}
             className="space-y-8"
           >
-            <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+            <div className="mb-2">
+            <h1 className="text-4xl md:text-6xl p-2 font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
               Start Saving Lives Today
             </h1>
+            </div>
 
             <p className="text-xl text-gray-300 leading-relaxed">
               Download QuakeRescue now and join our network of prepared

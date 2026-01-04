@@ -18,11 +18,16 @@ type Feature = {
 
 export const NAV_LINKS: NavLink[] = [
   { href: '/', label: 'Home' },
-  { href: '#features', label: 'Features' },
+  { href: '/features', label: 'Features' },
+  { href: '/architecture', label: 'Architecture' },
+  { href: '/technology', label: 'Technology' },
+  { href: '/api-docs', label: 'API Docs' },
+  { href: '/security', label: 'Security' },
+  { href: '/testing', label: 'Testing' },
   { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
   { href: '/docs', label: 'Documents' },
   { href: '/backlog', label: 'Backlog' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export const FEATURES: Feature[] = [

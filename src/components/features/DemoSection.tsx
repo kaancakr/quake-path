@@ -88,11 +88,12 @@ const DemoSection = () => {
               >
                 <a
                   href="/download"
-                  className="inline-block bg-white text-gray-900 px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all group hover:scale-105 active:scale-95"
+                  className="group relative inline-block bg-white text-gray-900 px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105 active:scale-95 overflow-hidden"
                 >
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:text-white transition-colors">
+                  <span className="relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:text-white transition-colors duration-300">
                     Launch Interactive Demo
                   </span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </a>
               </motion.div>
             </div>
