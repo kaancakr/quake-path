@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { db, firebaseInitialized } from "@/lib/firebase";
 import {
   EnvelopeIcon,
   PhoneIcon,
@@ -27,11 +28,24 @@ const ContactPage = () => {
     setSubmitStatus(null);
     
     try {
-      // Simulate API call - replace with actual endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      if (!firebaseInitialized || !db) {
+        throw new Error("Firebase is not initialized. Please install Firebase and configure it.");
+      }
+
+      // Dynamic import to avoid build errors if Firebase is not installed
+      // @ts-ignore - Firebase types may not be available until package is installed
+      const firestoreModule = await import("firebase/firestore");
+      const { collection, addDoc, serverTimestamp } = firestoreModule;
       
-      // Here you would typically send to your backend/API
-      // await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) });
+      // Save contact form data to Firebase Firestore
+      await addDoc(collection(db, "contacts"), {
+        name: data.name,
+        email: data.email,
+        message: data.message,
+        timestamp: serverTimestamp(),
+        status: "new",
+        createdAt: new Date().toISOString(),
+      });
       
       setSubmitStatus("success");
       reset();
@@ -39,6 +53,7 @@ const ContactPage = () => {
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus(null), 5000);
     } catch (error) {
+      console.error("Error submitting contact form:", error);
       setSubmitStatus("error");
       setTimeout(() => setSubmitStatus(null), 5000);
     } finally {
@@ -174,7 +189,7 @@ const ContactPage = () => {
                   className="p-4 bg-green-900/30 border border-green-500/50 rounded-xl flex items-center gap-3"
                 >
                   <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <p className="text-green-400">Message sent successfully! We'll get back to you soon.</p>
+                  <p className="text-green-400">Message sent successfully! We&apos;ll get back to you soon.</p>
                 </motion.div>
               )}
 
