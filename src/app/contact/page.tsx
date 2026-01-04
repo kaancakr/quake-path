@@ -32,8 +32,8 @@ const ContactPage = () => {
         throw new Error("Firebase is not initialized. Please install Firebase and configure it.");
       }
 
-      // Dynamic import to avoid build errors if Firebase is not installed
-      // @ts-ignore - Firebase types may not be available until package is installed
+      // Dynamic import of Firestore functions
+      // @ts-expect-error - Firebase module types may not be available until package is installed
       const firestoreModule = await import("firebase/firestore");
       const { collection, addDoc, serverTimestamp } = firestoreModule;
       
