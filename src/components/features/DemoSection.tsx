@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 
 const DemoSection = () => {
   const sectionRef = useRef(null);
@@ -86,7 +87,7 @@ const DemoSection = () => {
                 }
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <a
+                <Link
                   href="/download"
                   className="group relative inline-block bg-white text-gray-900 px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105 active:scale-95 overflow-hidden"
                 >
@@ -94,7 +95,7 @@ const DemoSection = () => {
                     Launch Interactive Demo
                   </span>
                   <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                </a>
+                </Link>
               </motion.div>
             </div>
           </div>

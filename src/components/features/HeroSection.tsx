@@ -6,6 +6,7 @@ import {
 } from "@heroicons/react/24/outline";
 import AnimatedText from "@/components/common/AnimatedText";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -58,22 +59,22 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6"
           >
-            <a
-              className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full flex items-center justify-center gap-3 font-semibold shadow-xl hover:shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105 active:scale-95 overflow-hidden"
+            <Link
               href="/download"
+              className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full flex items-center justify-center gap-3 font-semibold shadow-xl hover:shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105 active:scale-95 overflow-hidden"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
               <DevicePhoneMobileIcon className="w-6 h-6 transition-transform group-hover:scale-110 relative z-10" />
               <span className="relative z-10">Download App</span>
-            </a>
+            </Link>
 
-            <a
-              className="group bg-transparent border-2 border-blue-400/30 text-blue-300 px-8 py-4 rounded-full flex items-center justify-center gap-3 font-semibold hover:bg-blue-600/20 hover:border-blue-400/50 transition-all hover:scale-105 active:scale-95"
+            <Link
               href="/features"
+              className="group bg-transparent border-2 border-blue-400/30 text-blue-300 px-8 py-4 rounded-full flex items-center justify-center gap-3 font-semibold hover:bg-blue-600/20 hover:border-blue-400/50 transition-all hover:scale-105 active:scale-95"
             >
               <span>Learn More</span>
               <ArrowRightIcon className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
           </motion.div>
 
           {/* Stats or additional info */}
