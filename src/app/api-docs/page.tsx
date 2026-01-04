@@ -2,12 +2,10 @@
 
 import { motion } from "framer-motion";
 import {
-  CodeBracketIcon,
   ServerIcon,
   UserGroupIcon,
   ShieldCheckIcon,
   SignalIcon,
-  MapIcon,
 } from "@heroicons/react/24/outline";
 
 const fadeInUp = {

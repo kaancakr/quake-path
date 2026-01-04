@@ -3,7 +3,6 @@
 import {
   ArrowRightIcon,
   DevicePhoneMobileIcon,
-  SparklesIcon,
 } from "@heroicons/react/24/outline";
 import AnimatedText from "@/components/common/AnimatedText";
 import { motion } from "framer-motion";

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import {
   CheckCircleIcon,
-  XCircleIcon,
   BeakerIcon,
   ChartBarIcon,
   CpuChipIcon,
